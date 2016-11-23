@@ -1,0 +1,25 @@
+{
+    "name": "cloudswipe/cloudswipe-php",
+    "type": "library",
+    "description": "Official PHP library for the CloudSwipe API",
+    "keywords": ["cloudswipe", "api", "ecommerce", "payments", "payment"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joey Beninghove",
+            "email": "joey@cloudswipe.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4",
+      "cloudswipe/json-api-php-client": "~0.3"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "~4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "CloudSwipe\\": "src"
+        }
+    }
+}
