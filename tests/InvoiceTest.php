@@ -25,28 +25,6 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         ]);
     }
 
-    public function testUpdate()
-    {
-        $invoice = Invoice::create([
-            "description" => "T-Shirt",
-            "total" => 1995
-        ]);
-
-        $updated = Invoice::update($invoice->id, [
-            "description" => "Blue T-Shirt"
-        ]);
-    }
-
-    public function testDelete()
-    {
-        $invoice = Invoice::create([
-            "description" => "T-Shirt",
-            "total" => 1995
-        ]);
-
-        Invoice::delete($invoice->id);
-    }
-
     public function testGetOne()
     {
         $invoice = Invoice::create([
