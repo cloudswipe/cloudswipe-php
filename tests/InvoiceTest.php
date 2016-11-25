@@ -6,7 +6,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        CloudSwipe::setSecretKey("sk_store_68b8bfedbea80675fcf1374e");
+        CloudSwipe::setSecretKey("sk_store_450a2f49069330d59136400c");
     }
 
     public function testCreate()
@@ -30,15 +30,5 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         ]);
 
         $fetched = Invoice::getOne($invoice->id);
-    }
-
-    public function testGetAll()
-    {
-        $invoice = Invoice::create([
-            "description" => "T-Shirt",
-            "total" => 1995
-        ]);
-
-        $fetched = Invoice::getAll();
     }
 }
