@@ -2,14 +2,11 @@
 
 namespace CloudSwipe;
 
-use CloudSwipe\Resource;
-use CloudSwipe\Invoice;
-
 class InvoiceTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        Resource::setSecretKey("sk_store_68b8bfedbea80675fcf1374e");
+        CloudSwipe::setSecretKey("sk_store_68b8bfedbea80675fcf1374e");
     }
 
     public function testCreate()

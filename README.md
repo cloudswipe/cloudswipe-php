@@ -29,30 +29,28 @@ require_once('vendor/autoload.php');
 ## Usage
 
 ### Authentication
-All API authentication is done using HTTP Authentication with the **Secret Key**
-available in your CloudSwipe account.
+All API authentication is done using HTTP Authentication with the **Secret Key** available in your CloudSwipe account.
 
 You can set the **Secret Key** for all requests like this:
 
 ```php
-CloudSwipe::Resource::setSecretKey("sk_store_12345");
+CloudSwipe\CloudSwipe::setSecretKey("sk_store_12345");
 ```
 
 ### Invoices
 
 #### Create New Invoice
-```php
-use CloudSwipe\Invoice;
 
+```php
 // bare minimum invoice
-$invoice = Invoice::create([
+$invoice = CloudSwipe\Invoice::create([
   "description" => "T-Shirt",
   "total" => 1995,
   "currency" => "USD"
 ]);
 
 // more detailed invoice
-$invoice = Invoice::create([
+$invoice = CloudSwipe\Invoice::create([
   "total" => 2705,
   "currency" => "USD",
   "customer" => [
@@ -101,32 +99,12 @@ $invoice = Invoice::create([
 ]);
 ```
 
-#### Update An Existing Invoice
-```php
-use CloudSwipe\Invoice;
-
-$invoice = Invoice::update("in_12345", [
-  "description" => "Updated T-Shirt Description"
-]);
-```
-
-#### Delete An Invoice
-```php
-use CloudSwipe\Invoice;
-
-Invoice::delete("in_12345");
-```
-
 #### Get A Single Invoice
 ```php
-use CloudSwipe\Invoice;
-
-$invoice = Invoice::getOne("in_12345");
+$invoice = CloudSwipe\Invoice::getOne("in_12345");
 ```
 
 #### Get All Invoices
 ```php
-use CloudSwipe\Invoice;
-
-$invoices = Invoice::getAll();
+$invoices = CloudSwipe\Invoice::getAll();
 ```
